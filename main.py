@@ -241,7 +241,7 @@ class AnalysisForm(QMainWindow):
                      которые не являются частицами, местоимениями, местоимениями, союзами, предлогами """
                     if ("CONJ" not in res.tag) and ("NPRO" not in res.tag) and ("PREP" not in res.tag) and (
                             "PRCL" not in res.tag):
-                        """причем слова изменются и попадают в список в начальной форме"""
+                        """причем слова изменются и попадают в список в начальной форме и внижнем регистре"""
                         b.append((morph.parse(t)[0].normal_form).lower())
                         a.append(b)
                         b = []
